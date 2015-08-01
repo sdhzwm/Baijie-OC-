@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ffg-9d-xeT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Recommend Controller-->
+        <scene sceneID="ANN-2z-ChN">
+            <objects>
+                <viewController id="Ffg-9d-xeT" customClass="WMRecommendController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k9a-cy-6mS"/>
+                        <viewControllerLayoutGuide type="bottom" id="dIr-dn-2jK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xff-o7-Je9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sgl-0u-Ct2">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="667"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ffg-9d-xeT" id="mJI-ha-7Xh"/>
+                                    <outlet property="delegate" destination="Ffg-9d-xeT" id="4Z5-Ux-4Fx"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ciE-o7-VKD">
+                                <rect key="frame" x="75" y="0.0" width="300" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ffg-9d-xeT" id="kxP-cd-gnV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ciE-o7-VKD" secondAttribute="trailing" id="5jz-Ic-ljB"/>
+                            <constraint firstItem="sgl-0u-Ct2" firstAttribute="top" secondItem="Xff-o7-Je9" secondAttribute="top" id="73d-Yq-Cbo"/>
+                            <constraint firstItem="dIr-dn-2jK" firstAttribute="top" secondItem="ciE-o7-VKD" secondAttribute="bottom" id="BHH-tt-HTD"/>
+                            <constraint firstItem="sgl-0u-Ct2" firstAttribute="leading" secondItem="Xff-o7-Je9" secondAttribute="leading" id="XtQ-TN-mOM"/>
+                            <constraint firstItem="ciE-o7-VKD" firstAttribute="top" secondItem="Xff-o7-Je9" secondAttribute="top" id="k86-ey-xmv"/>
+                            <constraint firstItem="ciE-o7-VKD" firstAttribute="leading" secondItem="sgl-0u-Ct2" secondAttribute="trailing" id="piJ-bs-s3S"/>
+                            <constraint firstItem="dIr-dn-2jK" firstAttribute="top" secondItem="sgl-0u-Ct2" secondAttribute="bottom" id="q9i-Bw-fmx"/>
+                            <constraint firstItem="sgl-0u-Ct2" firstAttribute="width" secondItem="Xff-o7-Je9" secondAttribute="width" multiplier="0.2" id="sJL-2L-6Yo"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="categoryTableView" destination="sgl-0u-Ct2" id="UWf-0e-gCr"/>
+                        <outlet property="categoryUserTableView" destination="ciE-o7-VKD" id="Y82-Do-u4r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwZ-Ae-wrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="266"/>
+        </scene>
+    </scenes>
+</document>

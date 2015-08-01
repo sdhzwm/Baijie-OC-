@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WMShowModelImageController">
+            <connections>
+                <outlet property="scrollView" destination="hg6-j7-Bdt" id="iVG-hb-fb7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hg6-j7-Bdt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nt-Ii-Gij">
+                    <rect key="frame" x="23" y="30" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="bY2-7P-PCx"/>
+                        <constraint firstAttribute="height" constant="35" id="ezc-bS-7al"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="show_image_back_icon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="show_image_back_icon"/>
+                    <connections>
+                        <action selector="closeWindow" destination="-1" eventType="touchUpInside" id="7kb-Qj-of0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epr-EI-zfX">
+                    <rect key="frame" x="212" y="615" width="49" height="29"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="转发">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0Z-mn-Yo1">
+                    <rect key="frame" x="282" y="614" width="49" height="29"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="5Sy-U6-MQQ"/>
+                        <constraint firstAttribute="width" constant="49" id="Izs-on-7Gx"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveImage:" destination="-1" eventType="touchUpInside" id="NIf-5x-fmQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Q0Z-mn-Yo1" firstAttribute="leading" secondItem="epr-EI-zfX" secondAttribute="trailing" constant="21" id="HZy-Qa-WNx"/>
+                <constraint firstAttribute="trailing" secondItem="Q0Z-mn-Yo1" secondAttribute="trailing" constant="44" id="I96-yu-QCa"/>
+                <constraint firstItem="hg6-j7-Bdt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ITR-ZM-bJb"/>
+                <constraint firstItem="epr-EI-zfX" firstAttribute="bottom" secondItem="Q0Z-mn-Yo1" secondAttribute="bottom" constant="1" id="ORf-8u-DxT"/>
+                <constraint firstAttribute="trailing" secondItem="hg6-j7-Bdt" secondAttribute="trailing" id="QxF-w5-R5d"/>
+                <constraint firstItem="epr-EI-zfX" firstAttribute="height" secondItem="Q0Z-mn-Yo1" secondAttribute="height" id="UR8-tN-w4k"/>
+                <constraint firstAttribute="bottom" secondItem="Q0Z-mn-Yo1" secondAttribute="bottom" constant="24" id="WWu-M0-lh2"/>
+                <constraint firstItem="hg6-j7-Bdt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wb8-hz-0gu"/>
+                <constraint firstItem="0nt-Ii-Gij" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="WyI-sD-bgW"/>
+                <constraint firstItem="epr-EI-zfX" firstAttribute="width" secondItem="Q0Z-mn-Yo1" secondAttribute="width" id="cI1-QN-EQN"/>
+                <constraint firstAttribute="bottom" secondItem="hg6-j7-Bdt" secondAttribute="bottom" id="iYB-XH-ydM"/>
+                <constraint firstItem="0nt-Ii-Gij" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="wUV-Vu-56p"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="260.5" y="230.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>

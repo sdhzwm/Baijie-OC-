@@ -1,0 +1,22 @@
+
+
+#ifndef _1_______PrefixHeader_pch
+#define _1_______PrefixHeader_pch
+
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "WMConst.h"
+#import "NSDate+Extension.h"
+
+#ifdef DEBUG
+#define WMLog(...) NSLog(__VA_ARGS__)
+#else
+#define WMLog(...)
+#endif
+
+#define WMLogFunc WMLog(@"%s", __func__)
+
+#define WMRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define WMGlobalBg WMRGBColor(223, 223, 223)
+#endif
