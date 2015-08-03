@@ -35,7 +35,8 @@
     }else{
          self.sub_number.text = [NSString stringWithFormat:@"%zd推荐",subTag.sub_number];
     }
-    [self.image_list sd_setImageWithURL:[NSURL URLWithString:subTag.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [self.image_list setingHeader:subTag.image_list];
 }
 
 - (void)setFrame:(CGRect)frame

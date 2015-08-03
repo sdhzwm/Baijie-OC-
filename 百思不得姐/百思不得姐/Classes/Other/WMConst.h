@@ -29,3 +29,7 @@ UIKIT_EXTERN CGFloat const WMTextBottomViewH;
 UIKIT_EXTERN CGFloat const WMLargePictureMaxH;
 /**图片要显示的高度*/
 UIKIT_EXTERN CGFloat const WMLargePictureH;
+UIKIT_EXTERN NSString * const WMUserSexMale;
+UIKIT_EXTERN NSString * const WMUserSexFemale;
+/**用于发送tabbar选中的通知*/
+UIKIT_EXTERN NSString *const WMTabBarDidSelectNotification;

@@ -10,6 +10,7 @@
 @class WMWordToip;
 @interface WMAllEssenceCell : UITableViewCell
 
++ (instancetype)initWithCell;
 /**模型*/
 @property (nonatomic,strong) WMWordToip *wordToip;
 @end

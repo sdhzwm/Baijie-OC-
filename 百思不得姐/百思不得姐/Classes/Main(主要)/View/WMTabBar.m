@@ -39,6 +39,8 @@
 - (void)layoutSubviews{
 
     [super layoutSubviews];
+    
+    static BOOL isClick = NO;
     //对按钮进行布局
     CGSize btnWH = self.pushBtn.currentBackgroundImage.size;
     CGSize tabBarWH = self.frame.size;
@@ -51,12 +53,25 @@
     CGFloat buttonH = tabBarWH.height;
     NSInteger index = 0;
     //对子控件进行布局
-    for (UIView *btn in self.subviews) {
+    for (UIControl *btn in self.subviews) {
         if (![btn isKindOfClass:NSClassFromString(@"UITabBarButton")])continue;
         CGFloat buttonX = buttonW * ((index > 1)?(index + 1):index);
         btn.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         
         index++;
+        
+        if (isClick == NO) {
+            
+            [btn addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
+    isClick = YES;
 }
+
+//发送通知
+- (void)onClick{
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:WMTabBarDidSelectNotification object:nil userInfo:nil];
+}
+
 @end

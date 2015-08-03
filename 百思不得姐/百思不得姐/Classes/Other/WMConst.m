@@ -17,3 +17,9 @@ CGFloat const WMTextTopViewY = 55;
 CGFloat const WMTextBottomViewH = 44;
 CGFloat const WMLargePictureMaxH = 1000;
 CGFloat const WMLargePictureH = 250;
+/** XMGUser模型-性别属性值 */
+NSString * const WMUserSexMale = @"m";
+NSString * const WMUserSexFemale = @"f";
+
+/**用于tabBar的发送通知*/
+NSString *const WMTabBarDidSelectNotification = @"WMTabBarDidSelectNotification";

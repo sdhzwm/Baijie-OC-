@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class WMComment;
 @interface WMWordToip : NSObject
+/**ID*/
+@property (nonatomic,copy) NSString *ID;
 /** 名称 */
 @property (nonatomic, copy) NSString *name;
 /** 头像 */
@@ -29,6 +31,8 @@
 @property (nonatomic,assign,getter = isSina_v) BOOL sina_v;
 /**帖子的类型*/
 @property (nonatomic,assign)EssenceType  type;
+/**最热控件的模型*/
+@property (nonatomic,strong) NSArray *top_cmt;
 
 
 /** 小图片的URL */

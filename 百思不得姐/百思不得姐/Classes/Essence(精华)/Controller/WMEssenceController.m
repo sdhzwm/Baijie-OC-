@@ -20,6 +20,9 @@
 @property (nonatomic,weak) UIView   *titlesView;
 /**uiScrollView*/
 @property (nonatomic,weak) UIScrollView *conterView;
+
+/**记录选中的次数*/
+@property (nonatomic,assign) NSUInteger selectIndex;
 @end
 
 @implementation WMEssenceController
@@ -44,8 +47,9 @@
     
     UIBarButtonItem *item = [UIBarButtonItem initWithBackGroudImage:@"MainTagSubIcon" highlightedImage:@"MainTagSubIconClick" targer:self action:@selector(onClick)];
     self.navigationItem.leftBarButtonItem = item;
-
 }
+
+
 
 - (void)setUpSubController{
     WMWordController *sub4 = [[WMWordController alloc] init];
@@ -191,7 +195,4 @@
     [self titleClick:self.titlesView.subviews[atIndex]];
 
 }
-
-
-
 @end

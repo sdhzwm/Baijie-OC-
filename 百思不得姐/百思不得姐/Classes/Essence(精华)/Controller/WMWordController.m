@@ -13,18 +13,18 @@
 #import <MJRefresh.h>
 #import "WMWordToip.h"
 #import "WMAllEssenceCell.h"
+#import "WMCommentViewController.h"
+#import "WMNewController.h"
 
 @interface WMWordController ()
-
 /**模型*/
 @property (nonatomic,strong) NSMutableArray *words;
-
 /**加载帖子关键字*/
 @property (nonatomic,copy) NSString *maxtime;
-
-
 /**页数*/
 @property (nonatomic,assign) NSUInteger page;
+/**记录选中的次数*/
+@property (nonatomic,assign) NSUInteger selectIndex;
 @end
 
 @implementation WMWordController
@@ -57,7 +57,15 @@ static NSString *allWord = @"allWordId";
     self.tableView.backgroundColor = [UIColor clearColor];
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([WMAllEssenceCell class]) bundle:nil] forCellReuseIdentifier:allWord];
+    //添加通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarDidSelect) name:WMTabBarDidSelectNotification object:nil];
+}
 
+- (void)tabBarDidSelect{
+    if(self.selectIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow){
+        [self.tableView.header beginRefreshing];
+    }
+    self.selectIndex = self.tabBarController.selectedIndex;
 }
 
 - (void)setUpRefresh{
@@ -70,13 +78,15 @@ static NSString *allWord = @"allWordId";
     
 }
 
-
+- (NSString *)a{
+    return [self.parentViewController isKindOfClass:[WMNewController class]] ? @"newlist" : @"list";
+}
 - (void)setLoadNewData{
     
     [self.tableView.footer endRefreshing];
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    parameters[@"a"] = self.a;
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(self.essenceType);
     
@@ -105,7 +115,7 @@ static NSString *allWord = @"allWordId";
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     
-    parameters[@"a"] = @"list";
+    parameters[@"a"] = self.a;
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(self.essenceType);
     NSInteger page = self.page + 1;
@@ -156,5 +166,12 @@ static NSString *allWord = @"allWordId";
     return toip.cellHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    WMCommentViewController *cmtVc = [[WMCommentViewController alloc] init];
+    cmtVc.wordToip = self.words[indexPath.row];
+    
+    [self.navigationController pushViewController:cmtVc animated:YES];
+
+}
 
 @end

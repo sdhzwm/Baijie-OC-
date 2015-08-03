@@ -35,6 +35,8 @@
 -(void)setState:(NSString *)state{
     _state = state;
     
+    [self.btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    
     if ([state isEqualToString:@"ref"]) {
         [self.btn setTitle:@"推荐标签" forState:UIControlStateNormal];
         self.btn.enabled = YES;
@@ -47,8 +49,6 @@
 - (IBAction)onClick:(UIButton*)sender {
    
     if ([self.delegate respondsToSelector:@selector(headView:didOnclick:)]) {
-        NSLog(@"%@",@"ssssssssssssss");
-
         [self.delegate headView:self didOnclick:sender];
     }
 }

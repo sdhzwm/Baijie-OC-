@@ -7,7 +7,8 @@
 //
 
 #import "WMWordToip.h"
-
+#import "WMComment.h"
+#import "WMUser.h"
 
 @implementation WMWordToip
 //成员属性
@@ -22,8 +23,15 @@
 
     return @{ @"small_image":@"image0",
               @"middle_image":@"image1",
-              @"large_image":@"image2"
+              @"large_image":@"image2",
+              @"ID":@"id"
              };
+}
+
++ (NSDictionary *)objectClassInArray
+{
+    //    return @{@"top_cmt" : [XMGComment class]};
+    return @{@"top_cmt" : @"WMComment"};
 }
 //首先要判断帖子是否是今年的，如果是今年的则有以下情况
 //是否是今天的:如果是今天 -1小时内的话显示XX分钟，否则是显示xx小时
@@ -111,7 +119,13 @@
             _cellHeight += videoH + WMWordCellMargin;
             
         }
-
+        
+        WMComment *cmt = [self.top_cmt firstObject];
+        if (cmt) {
+             NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+             CGFloat hotTitleH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+             _cellHeight +=  hotTitleH + WMWordCellMargin + 10;
+        }
         _cellHeight += WMWordCellMargin + WMTextBottomViewH;
     }
     return _cellHeight;

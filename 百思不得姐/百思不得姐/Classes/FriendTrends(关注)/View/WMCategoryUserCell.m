@@ -22,7 +22,8 @@
 - (void)setUser:(WMCategoryUsers *)user{
     _user = user;
     
-    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:user.header]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+
+     [self.iconImageView setingHeader:user.header];
     self.screen_name.text = user.screen_name;
     if (user.fans_count > 10000.0) {
         

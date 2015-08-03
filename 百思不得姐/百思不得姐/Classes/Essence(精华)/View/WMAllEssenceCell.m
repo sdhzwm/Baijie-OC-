@@ -12,6 +12,8 @@
 #import "WMTopicPictureView.h"
 #import "WMToipVoiceView.h"
 #import "WMToipVideoView.h"
+#import "WMComment.h"
+#import "WMUser.h"
 @interface WMAllEssenceCell()
 /** 头像 */
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -37,6 +39,9 @@
 @property (nonatomic,weak) WMToipVoiceView *voiceView;
 /**视频视图2*/
 @property (nonatomic,weak) WMToipVideoView *videoView;
+@property (weak, nonatomic) IBOutlet UIView *hotView;
+@property (weak, nonatomic) IBOutlet UILabel *hotTitlelabel;
+
 @end
 @implementation WMAllEssenceCell
 
@@ -73,10 +78,14 @@
     self.backgroundView = bgView;
 }
 
++ (instancetype)initWithCell{
+    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
+}
 
 - (void)setWordToip:(WMWordToip *)wordToip{
     _wordToip = wordToip;
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:wordToip.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+
+    [self.profileImageView setingHeader:wordToip.profile_image];
     self.nameLabel.text = wordToip.name;
     self.sina_v.hidden = !wordToip.isSina_v;
     self.createTimeLabel.text = wordToip.create_time;
@@ -106,6 +115,16 @@
         self.voiceView.hidden = YES;
     }
     [self setBtnByWordToip:wordToip];
+    
+    WMComment *comment = [wordToip.top_cmt firstObject];
+    if (comment) {
+        //comment不为空
+        self.hotView.hidden = NO;
+        self.hotTitlelabel.text = [NSString stringWithFormat:@"%@ :%@",comment.user.username,comment.content];
+    }else{
+        self.hotView.hidden = YES;
+    }
+    
 }
 
 
@@ -124,13 +143,22 @@
     [btn setTitle:placeholder forState:UIControlStateNormal];
 }
 
-- (void)setFrame:(CGRect)frame{
-    CGFloat more = 10;
-    frame.origin.x = more;
-    frame.size.width -=2*more;
-    frame.origin.y += more;
-    frame.size.height -= more;
+
+- (IBAction)btnClick:(id)sender {
     
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏",@"举报", nil];
+    [sheet showInView:self.window];
+}
+
+
+- (void)setFrame:(CGRect)frame{
+    
+    CGFloat more = 10;
+    
+    frame.origin.x = more;
+    frame.size.width -= 2*more;
+    frame.origin.y += more;
+    frame.size.height = self.wordToip.cellHeight - more;
     [super setFrame:frame];
 }
 

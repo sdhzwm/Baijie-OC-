@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		628CD71ED1DA57711AA51C00 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC907E79F2569AA2500C259C /* libPods.a */; };
+		97051C421B6FBEB0006E2565 /* UIImage+WMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 97051C411B6FBEB0006E2565 /* UIImage+WMExtension.m */; };
+		97051C451B6FC111006E2565 /* UIImageView+WMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 97051C441B6FC111006E2565 /* UIImageView+WMExtension.m */; };
 		971A7B961B64F8B600F9249D /* WMGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971A7B951B64F8B600F9249D /* WMGuideView.m */; };
 		971A7B981B64F8D300F9249D /* WMGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 971A7B971B64F8D300F9249D /* WMGuideView.xib */; };
 		971A7B9C1B64FEE800F9249D /* WMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971A7B9A1B64FEE800F9249D /* WMLoginController.m */; };
@@ -19,6 +21,9 @@
 		971A7BAC1B65FEE000F9249D /* WMWordToip.m in Sources */ = {isa = PBXBuildFile; fileRef = 971A7BAB1B65FEE000F9249D /* WMWordToip.m */; };
 		971A7BB61B66195C00F9249D /* WMAllEssenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 971A7BB41B66195C00F9249D /* WMAllEssenceCell.m */; };
 		971A7BB71B66195C00F9249D /* WMAllEssenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 971A7BB51B66195C00F9249D /* WMAllEssenceCell.xib */; };
+		972085E51B6E726800AA91FE /* WMCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 972085E41B6E726800AA91FE /* WMCommentHeaderView.m */; };
+		972085E91B6F2E8700AA91FE /* WMCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 972085E71B6F2E8700AA91FE /* WMCommentCell.m */; };
+		972085EA1B6F2E8700AA91FE /* WMCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972085E81B6F2E8700AA91FE /* WMCommentCell.xib */; };
 		972D1D3C1B69194D008D422C /* WMTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D1D3B1B69194D008D422C /* WMTopicPictureView.m */; };
 		972D1D3E1B69195D008D422C /* WMTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972D1D3D1B69195D008D422C /* WMTopicPictureView.xib */; };
 		972D1D411B693210008D422C /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D1D401B693210008D422C /* WMProgressView.m */; };
@@ -40,6 +45,10 @@
 		975189031B61D9D6003DED0D /* WMSubscribedTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 975189021B61D9D6003DED0D /* WMSubscribedTag.m */; };
 		975189061B61DF45003DED0D /* WMSubscribedTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 975189051B61DF45003DED0D /* WMSubscribedTagCell.m */; };
 		9757AE681B5FFFC0001D6A18 /* Recommend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9757AE671B5FFFC0001D6A18 /* Recommend.storyboard */; };
+		9761B6F01B6E331400549CFF /* WMComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9761B6EF1B6E331400549CFF /* WMComment.m */; };
+		9761B6F31B6E334A00549CFF /* WMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9761B6F21B6E334A00549CFF /* WMUser.m */; };
+		9761B6F71B6E41A700549CFF /* WMCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9761B6F51B6E41A700549CFF /* WMCommentViewController.m */; };
+		9761B6F81B6E41A700549CFF /* WMCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9761B6F61B6E41A700549CFF /* WMCommentViewController.xib */; };
 		97B7259D1B60ABFE00482C5B /* WMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B7259C1B60ABFE00482C5B /* WMCategory.m */; };
 		97B725A11B60ADB700482C5B /* WMCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B7259F1B60ADB700482C5B /* WMCategoryCell.m */; };
 		97B725A21B60ADB700482C5B /* WMCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97B725A01B60ADB700482C5B /* WMCategoryCell.xib */; };
@@ -78,6 +87,10 @@
 /* Begin PBXFileReference section */
 		3660BB99EB8B58187909A33D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5B53B883125E31723DFDA75D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		97051C401B6FBEB0006E2565 /* UIImage+WMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WMExtension.h"; sourceTree = "<group>"; };
+		97051C411B6FBEB0006E2565 /* UIImage+WMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WMExtension.m"; sourceTree = "<group>"; };
+		97051C431B6FC111006E2565 /* UIImageView+WMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WMExtension.h"; sourceTree = "<group>"; };
+		97051C441B6FC111006E2565 /* UIImageView+WMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WMExtension.m"; sourceTree = "<group>"; };
 		971A7B941B64F8B600F9249D /* WMGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGuideView.h; sourceTree = "<group>"; };
 		971A7B951B64F8B600F9249D /* WMGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGuideView.m; sourceTree = "<group>"; };
 		971A7B971B64F8D300F9249D /* WMGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMGuideView.xib; sourceTree = "<group>"; };
@@ -97,6 +110,11 @@
 		971A7BB31B66195C00F9249D /* WMAllEssenceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAllEssenceCell.h; sourceTree = "<group>"; };
 		971A7BB41B66195C00F9249D /* WMAllEssenceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMAllEssenceCell.m; sourceTree = "<group>"; };
 		971A7BB51B66195C00F9249D /* WMAllEssenceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMAllEssenceCell.xib; sourceTree = "<group>"; };
+		972085E31B6E726800AA91FE /* WMCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCommentHeaderView.h; sourceTree = "<group>"; };
+		972085E41B6E726800AA91FE /* WMCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCommentHeaderView.m; sourceTree = "<group>"; };
+		972085E61B6F2E8700AA91FE /* WMCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCommentCell.h; sourceTree = "<group>"; };
+		972085E71B6F2E8700AA91FE /* WMCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCommentCell.m; sourceTree = "<group>"; };
+		972085E81B6F2E8700AA91FE /* WMCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMCommentCell.xib; sourceTree = "<group>"; };
 		972D1D3A1B69194D008D422C /* WMTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTopicPictureView.h; sourceTree = "<group>"; };
 		972D1D3B1B69194D008D422C /* WMTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTopicPictureView.m; sourceTree = "<group>"; };
 		972D1D3D1B69195D008D422C /* WMTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMTopicPictureView.xib; sourceTree = "<group>"; };
@@ -130,6 +148,13 @@
 		975189041B61DF45003DED0D /* WMSubscribedTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSubscribedTagCell.h; sourceTree = "<group>"; };
 		975189051B61DF45003DED0D /* WMSubscribedTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSubscribedTagCell.m; sourceTree = "<group>"; };
 		9757AE671B5FFFC0001D6A18 /* Recommend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recommend.storyboard; sourceTree = "<group>"; };
+		9761B6EE1B6E331400549CFF /* WMComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMComment.h; sourceTree = "<group>"; };
+		9761B6EF1B6E331400549CFF /* WMComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMComment.m; sourceTree = "<group>"; };
+		9761B6F11B6E334A00549CFF /* WMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMUser.h; sourceTree = "<group>"; };
+		9761B6F21B6E334A00549CFF /* WMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMUser.m; sourceTree = "<group>"; };
+		9761B6F41B6E41A700549CFF /* WMCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCommentViewController.h; sourceTree = "<group>"; };
+		9761B6F51B6E41A700549CFF /* WMCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCommentViewController.m; sourceTree = "<group>"; };
+		9761B6F61B6E41A700549CFF /* WMCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMCommentViewController.xib; sourceTree = "<group>"; };
 		97B7259B1B60ABFE00482C5B /* WMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCategory.h; sourceTree = "<group>"; };
 		97B7259C1B60ABFE00482C5B /* WMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCategory.m; sourceTree = "<group>"; };
 		97B7259E1B60ADB700482C5B /* WMCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCategoryCell.h; sourceTree = "<group>"; };
@@ -308,6 +333,9 @@
 				972D1D421B6938A1008D422C /* WMShowModelImageController.h */,
 				972D1D431B6938A1008D422C /* WMShowModelImageController.m */,
 				972D1D441B6938A1008D422C /* WMShowModelImageController.xib */,
+				9761B6F41B6E41A700549CFF /* WMCommentViewController.h */,
+				9761B6F51B6E41A700549CFF /* WMCommentViewController.m */,
+				9761B6F61B6E41A700549CFF /* WMCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +347,10 @@
 				975189021B61D9D6003DED0D /* WMSubscribedTag.m */,
 				971A7BAA1B65FEE000F9249D /* WMWordToip.h */,
 				971A7BAB1B65FEE000F9249D /* WMWordToip.m */,
+				9761B6EE1B6E331400549CFF /* WMComment.h */,
+				9761B6EF1B6E331400549CFF /* WMComment.m */,
+				9761B6F11B6E334A00549CFF /* WMUser.h */,
+				9761B6F21B6E334A00549CFF /* WMUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,6 +387,11 @@
 				9731321A1B6B1D7A0065F00B /* WMToipVoiceView.h */,
 				9731321B1B6B1D7A0065F00B /* WMToipVoiceView.m */,
 				9731321D1B6B1D880065F00B /* WMToipVoiceView.xib */,
+				972085E31B6E726800AA91FE /* WMCommentHeaderView.h */,
+				972085E41B6E726800AA91FE /* WMCommentHeaderView.m */,
+				972085E61B6F2E8700AA91FE /* WMCommentCell.h */,
+				972085E71B6F2E8700AA91FE /* WMCommentCell.m */,
+				972085E81B6F2E8700AA91FE /* WMCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,6 +611,10 @@
 				97DA9C171B5FD31300F3D055 /* UIBarButtonItem+Extension.m */,
 				97E692741B6673E70038C656 /* NSDate+Extension.h */,
 				97E692751B6673E70038C656 /* NSDate+Extension.m */,
+				97051C401B6FBEB0006E2565 /* UIImage+WMExtension.h */,
+				97051C411B6FBEB0006E2565 /* UIImage+WMExtension.m */,
+				97051C431B6FC111006E2565 /* UIImageView+WMExtension.h */,
+				97051C441B6FC111006E2565 /* UIImageView+WMExtension.m */,
 			);
 			path = Categoty;
 			sourceTree = "<group>";
@@ -689,6 +730,8 @@
 				973132231B6B5A0F0065F00B /* WMToipVideoView.xib in Resources */,
 				975189001B61D631003DED0D /* Subscribed.storyboard in Resources */,
 				973132191B6A76560065F00B /* WMPublishViewController.xib in Resources */,
+				972085EA1B6F2E8700AA91FE /* WMCommentCell.xib in Resources */,
+				9761B6F81B6E41A700549CFF /* WMCommentViewController.xib in Resources */,
 				971A7B981B64F8D300F9249D /* WMGuideView.xib in Resources */,
 				974D1F291B62757D005E10FC /* WMSubscirUserTagCell.xib in Resources */,
 				97B725A21B60ADB700482C5B /* WMCategoryCell.xib in Resources */,
@@ -749,16 +792,22 @@
 				97B725AA1B6104CD00482C5B /* WMCategoryUsers.m in Sources */,
 				971A7BA01B650A5C00F9249D /* WMCustomBtn.m in Sources */,
 				97B725A61B60BAA100482C5B /* WMCategoryUserCell.m in Sources */,
+				97051C451B6FC111006E2565 /* UIImageView+WMExtension.m in Sources */,
 				97DA9C221B5FD31300F3D055 /* WMRecommendController.m in Sources */,
 				97DA9C291B5FD31300F3D055 /* Foundation+Log.m in Sources */,
+				972085E51B6E726800AA91FE /* WMCommentHeaderView.m in Sources */,
+				9761B6F71B6E41A700549CFF /* WMCommentViewController.m in Sources */,
 				971A7BA61B654C7E00F9249D /* WMWordController.m in Sources */,
 				97DA9C2C1B5FD31300F3D055 /* UIView+Extension.m in Sources */,
+				97051C421B6FBEB0006E2565 /* UIImage+WMExtension.m in Sources */,
 				971A7BB61B66195C00F9249D /* WMAllEssenceCell.m in Sources */,
 				971A7BAC1B65FEE000F9249D /* WMWordToip.m in Sources */,
 				972D1D3C1B69194D008D422C /* WMTopicPictureView.m in Sources */,
 				971A7B9C1B64FEE800F9249D /* WMLoginController.m in Sources */,
 				971A7B961B64F8B600F9249D /* WMGuideView.m in Sources */,
+				9761B6F01B6E331400549CFF /* WMComment.m in Sources */,
 				97B7259D1B60ABFE00482C5B /* WMCategory.m in Sources */,
+				9761B6F31B6E334A00549CFF /* WMUser.m in Sources */,
 				975189031B61D9D6003DED0D /* WMSubscribedTag.m in Sources */,
 				97DA9C251B5FD31300F3D055 /* WMTabBarController.m in Sources */,
 				974D1F1D1B622EE0005E10FC /* WMRefHeadView.m in Sources */,
@@ -768,6 +817,7 @@
 				975188FE1B61D5B2003DED0D /* WMSubscribedTagController.m in Sources */,
 				975189061B61DF45003DED0D /* WMSubscribedTagCell.m in Sources */,
 				97DA9C261B5FD31300F3D055 /* WMTabBar.m in Sources */,
+				972085E91B6F2E8700AA91FE /* WMCommentCell.m in Sources */,
 				97E692761B6673E70038C656 /* NSDate+Extension.m in Sources */,
 				974D1F281B62757D005E10FC /* WMSubscirUserTagCell.m in Sources */,
 				973132221B6B5A0F0065F00B /* WMToipVideoView.m in Sources */,

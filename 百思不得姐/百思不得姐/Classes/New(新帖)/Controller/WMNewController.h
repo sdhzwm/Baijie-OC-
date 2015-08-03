@@ -6,8 +6,7 @@
 //  Copyright (c) 2015年 wm. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface WMNewController : UIViewController
+#import "WMEssenceController.h"
+@interface WMNewController : WMEssenceController
 
 @end
