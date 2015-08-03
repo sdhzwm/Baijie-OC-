@@ -125,7 +125,9 @@ static NSString *ID = @"comentCell";
     
     self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self  refreshingAction:@selector(loadNewComments)];
+   
     [self.tableView.header beginRefreshing];
+    self.tableView.footer.hidden = YES;
 }
 
 #pragma mark - 网络请求
@@ -152,6 +154,12 @@ static NSString *ID = @"comentCell";
         [self.tableView reloadData];
         self.page = 1;
         [self.tableView.header endRefreshing];
+        
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.lastComments.count >= total) { // 全部加载完毕
+            self.tableView.footer.hidden = YES;
+        }
+
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [self.tableView.header endRefreshing];
@@ -181,7 +189,7 @@ static NSString *ID = @"comentCell";
         NSArray *lastCmt = [WMComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
         
         [self.lastComments addObjectsFromArray:lastCmt];
-        self.page = page + 1;
+        self.page = page;
         [self.tableView reloadData];
         //控制foot的状态
         NSUInteger total = [responseObject[@"total"]integerValue];
@@ -229,6 +237,7 @@ static NSString *ID = @"comentCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSUInteger hotCount = self.hotComments.count;
     NSUInteger lastCount = self.lastComments.count;
+    
     self.tableView.footer.hidden = (lastCount == 0);
     if(section == 0){
         return hotCount ? hotCount : lastCount;
