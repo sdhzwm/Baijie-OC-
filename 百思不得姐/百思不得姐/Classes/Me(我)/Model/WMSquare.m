@@ -1,13 +1,13 @@
 //
-//  WMMeController.h
+//  WMSquare.m
 //  百思不得姐
 //
 //  Created by 王蒙 on 15/8/4.
 //  Copyright (c) 2015年 wm. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WMSquare.h"
 
-@interface WMMeController : UITableViewController
+@implementation WMSquare
 
 @end

@@ -55,6 +55,14 @@
 		97B725A61B60BAA100482C5B /* WMCategoryUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B725A41B60BAA100482C5B /* WMCategoryUserCell.m */; };
 		97B725A71B60BAA100482C5B /* WMCategoryUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97B725A51B60BAA100482C5B /* WMCategoryUserCell.xib */; };
 		97B725AA1B6104CD00482C5B /* WMCategoryUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B725A91B6104CD00482C5B /* WMCategoryUsers.m */; };
+		97CF14601B704E3300A1C50D /* WMTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CF145F1B704E3300A1C50D /* WMTopWindow.m */; };
+		97CF14661B70639E00A1C50D /* WMMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CF14641B70639E00A1C50D /* WMMeController.m */; };
+		97CF146A1B70668C00A1C50D /* WMMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CF14691B70668C00A1C50D /* WMMeCell.m */; };
+		97CF146D1B706DAB00A1C50D /* WMMeFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CF146C1B706DAB00A1C50D /* WMMeFootView.m */; };
+		97CF14701B70702100A1C50D /* WMSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CF146F1B70702100A1C50D /* WMSquare.m */; };
+		97CF14731B70850600A1C50D /* WMMeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CF14721B70850600A1C50D /* WMMeButton.m */; };
+		97CF147A1B7092CF00A1C50D /* WMMeWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CF14781B7092CF00A1C50D /* WMMeWebController.m */; };
+		97CF147B1B7092CF00A1C50D /* WMMeWebController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97CF14791B7092CF00A1C50D /* WMMeWebController.xib */; };
 		97DA9B6F1B5F472800F3D055 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA9B6E1B5F472800F3D055 /* main.m */; };
 		97DA9B7A1B5F472800F3D055 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DA9B791B5F472800F3D055 /* Images.xcassets */; };
 		97DA9B891B5F472800F3D055 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA9B881B5F472800F3D055 /* _____Tests.m */; };
@@ -65,7 +73,6 @@
 		97DA9C241B5FD31300F3D055 /* WMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA9BFD1B5FD31300F3D055 /* WMNavigationController.m */; };
 		97DA9C251B5FD31300F3D055 /* WMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA9BFF1B5FD31300F3D055 /* WMTabBarController.m */; };
 		97DA9C261B5FD31300F3D055 /* WMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA9C041B5FD31300F3D055 /* WMTabBar.m */; };
-		97DA9C271B5FD31300F3D055 /* WMMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA9C081B5FD31300F3D055 /* WMMeController.m */; };
 		97DA9C281B5FD31300F3D055 /* WMNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA9C0F1B5FD31300F3D055 /* WMNewController.m */; };
 		97DA9C291B5FD31300F3D055 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA9C151B5FD31300F3D055 /* Foundation+Log.m */; };
 		97DA9C2A1B5FD31300F3D055 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DA9C171B5FD31300F3D055 /* UIBarButtonItem+Extension.m */; };
@@ -165,6 +172,21 @@
 		97B725A51B60BAA100482C5B /* WMCategoryUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMCategoryUserCell.xib; sourceTree = "<group>"; };
 		97B725A81B6104CD00482C5B /* WMCategoryUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCategoryUsers.h; sourceTree = "<group>"; };
 		97B725A91B6104CD00482C5B /* WMCategoryUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCategoryUsers.m; sourceTree = "<group>"; };
+		97CF145E1B704E3300A1C50D /* WMTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTopWindow.h; sourceTree = "<group>"; };
+		97CF145F1B704E3300A1C50D /* WMTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTopWindow.m; sourceTree = "<group>"; };
+		97CF14631B70639E00A1C50D /* WMMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMeController.h; sourceTree = "<group>"; };
+		97CF14641B70639E00A1C50D /* WMMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMeController.m; sourceTree = "<group>"; };
+		97CF14681B70668C00A1C50D /* WMMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMeCell.h; sourceTree = "<group>"; };
+		97CF14691B70668C00A1C50D /* WMMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMeCell.m; sourceTree = "<group>"; };
+		97CF146B1B706DAB00A1C50D /* WMMeFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMeFootView.h; sourceTree = "<group>"; };
+		97CF146C1B706DAB00A1C50D /* WMMeFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMeFootView.m; sourceTree = "<group>"; };
+		97CF146E1B70702100A1C50D /* WMSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSquare.h; sourceTree = "<group>"; };
+		97CF146F1B70702100A1C50D /* WMSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSquare.m; sourceTree = "<group>"; };
+		97CF14711B70850600A1C50D /* WMMeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMeButton.h; sourceTree = "<group>"; };
+		97CF14721B70850600A1C50D /* WMMeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMeButton.m; sourceTree = "<group>"; };
+		97CF14771B7092CF00A1C50D /* WMMeWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMeWebController.h; sourceTree = "<group>"; };
+		97CF14781B7092CF00A1C50D /* WMMeWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMeWebController.m; sourceTree = "<group>"; };
+		97CF14791B7092CF00A1C50D /* WMMeWebController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMMeWebController.xib; sourceTree = "<group>"; };
 		97DA9B691B5F472800F3D055 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DA9B6D1B5F472800F3D055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97DA9B6E1B5F472800F3D055 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -185,8 +207,6 @@
 		97DA9BFF1B5FD31300F3D055 /* WMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTabBarController.m; sourceTree = "<group>"; };
 		97DA9C031B5FD31300F3D055 /* WMTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTabBar.h; sourceTree = "<group>"; };
 		97DA9C041B5FD31300F3D055 /* WMTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTabBar.m; sourceTree = "<group>"; };
-		97DA9C071B5FD31300F3D055 /* WMMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMeController.h; sourceTree = "<group>"; };
-		97DA9C081B5FD31300F3D055 /* WMMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMeController.m; sourceTree = "<group>"; };
 		97DA9C0E1B5FD31300F3D055 /* WMNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNewController.h; sourceTree = "<group>"; };
 		97DA9C0F1B5FD31300F3D055 /* WMNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNewController.m; sourceTree = "<group>"; };
 		97DA9C151B5FD31300F3D055 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
@@ -520,8 +540,11 @@
 		97DA9C061B5FD31300F3D055 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				97DA9C071B5FD31300F3D055 /* WMMeController.h */,
-				97DA9C081B5FD31300F3D055 /* WMMeController.m */,
+				97CF14631B70639E00A1C50D /* WMMeController.h */,
+				97CF14641B70639E00A1C50D /* WMMeController.m */,
+				97CF14771B7092CF00A1C50D /* WMMeWebController.h */,
+				97CF14781B7092CF00A1C50D /* WMMeWebController.m */,
+				97CF14791B7092CF00A1C50D /* WMMeWebController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -529,6 +552,8 @@
 		97DA9C091B5FD31300F3D055 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				97CF146E1B70702100A1C50D /* WMSquare.h */,
+				97CF146F1B70702100A1C50D /* WMSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -543,6 +568,12 @@
 		97DA9C0B1B5FD31300F3D055 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				97CF14681B70668C00A1C50D /* WMMeCell.h */,
+				97CF14691B70668C00A1C50D /* WMMeCell.m */,
+				97CF146B1B706DAB00A1C50D /* WMMeFootView.h */,
+				97CF146C1B706DAB00A1C50D /* WMMeFootView.m */,
+				97CF14711B70850600A1C50D /* WMMeButton.h */,
+				97CF14721B70850600A1C50D /* WMMeButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -634,6 +665,8 @@
 				971A7B941B64F8B600F9249D /* WMGuideView.h */,
 				971A7B951B64F8B600F9249D /* WMGuideView.m */,
 				971A7B971B64F8D300F9249D /* WMGuideView.xib */,
+				97CF145E1B704E3300A1C50D /* WMTopWindow.h */,
+				97CF145F1B704E3300A1C50D /* WMTopWindow.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -731,6 +764,7 @@
 				975189001B61D631003DED0D /* Subscribed.storyboard in Resources */,
 				973132191B6A76560065F00B /* WMPublishViewController.xib in Resources */,
 				972085EA1B6F2E8700AA91FE /* WMCommentCell.xib in Resources */,
+				97CF147B1B7092CF00A1C50D /* WMMeWebController.xib in Resources */,
 				9761B6F81B6E41A700549CFF /* WMCommentViewController.xib in Resources */,
 				971A7B981B64F8D300F9249D /* WMGuideView.xib in Resources */,
 				974D1F291B62757D005E10FC /* WMSubscirUserTagCell.xib in Resources */,
@@ -798,29 +832,36 @@
 				972085E51B6E726800AA91FE /* WMCommentHeaderView.m in Sources */,
 				9761B6F71B6E41A700549CFF /* WMCommentViewController.m in Sources */,
 				971A7BA61B654C7E00F9249D /* WMWordController.m in Sources */,
+				97CF14601B704E3300A1C50D /* WMTopWindow.m in Sources */,
 				97DA9C2C1B5FD31300F3D055 /* UIView+Extension.m in Sources */,
 				97051C421B6FBEB0006E2565 /* UIImage+WMExtension.m in Sources */,
 				971A7BB61B66195C00F9249D /* WMAllEssenceCell.m in Sources */,
 				971A7BAC1B65FEE000F9249D /* WMWordToip.m in Sources */,
 				972D1D3C1B69194D008D422C /* WMTopicPictureView.m in Sources */,
+				97CF14731B70850600A1C50D /* WMMeButton.m in Sources */,
 				971A7B9C1B64FEE800F9249D /* WMLoginController.m in Sources */,
 				971A7B961B64F8B600F9249D /* WMGuideView.m in Sources */,
 				9761B6F01B6E331400549CFF /* WMComment.m in Sources */,
 				97B7259D1B60ABFE00482C5B /* WMCategory.m in Sources */,
 				9761B6F31B6E334A00549CFF /* WMUser.m in Sources */,
+				97CF14661B70639E00A1C50D /* WMMeController.m in Sources */,
 				975189031B61D9D6003DED0D /* WMSubscribedTag.m in Sources */,
 				97DA9C251B5FD31300F3D055 /* WMTabBarController.m in Sources */,
 				974D1F1D1B622EE0005E10FC /* WMRefHeadView.m in Sources */,
 				97DA9C201B5FD31300F3D055 /* WMFriendTrendsController.m in Sources */,
 				9731321C1B6B1D7A0065F00B /* WMToipVoiceView.m in Sources */,
+				97CF147A1B7092CF00A1C50D /* WMMeWebController.m in Sources */,
 				971A7BA31B65316900F9249D /* WMTextFiled.m in Sources */,
 				975188FE1B61D5B2003DED0D /* WMSubscribedTagController.m in Sources */,
 				975189061B61DF45003DED0D /* WMSubscribedTagCell.m in Sources */,
 				97DA9C261B5FD31300F3D055 /* WMTabBar.m in Sources */,
+				97CF146A1B70668C00A1C50D /* WMMeCell.m in Sources */,
 				972085E91B6F2E8700AA91FE /* WMCommentCell.m in Sources */,
 				97E692761B6673E70038C656 /* NSDate+Extension.m in Sources */,
 				974D1F281B62757D005E10FC /* WMSubscirUserTagCell.m in Sources */,
+				97CF146D1B706DAB00A1C50D /* WMMeFootView.m in Sources */,
 				973132221B6B5A0F0065F00B /* WMToipVideoView.m in Sources */,
+				97CF14701B70702100A1C50D /* WMSquare.m in Sources */,
 				972D1D411B693210008D422C /* WMProgressView.m in Sources */,
 				97DA9C281B5FD31300F3D055 /* WMNewController.m in Sources */,
 				97B725A11B60ADB700482C5B /* WMCategoryCell.m in Sources */,
@@ -831,7 +872,6 @@
 				973132181B6A76560065F00B /* WMPublishViewController.m in Sources */,
 				97DA9C241B5FD31300F3D055 /* WMNavigationController.m in Sources */,
 				97DA9C2B1B5FD31300F3D055 /* AppDelegate.m in Sources */,
-				97DA9C271B5FD31300F3D055 /* WMMeController.m in Sources */,
 				97DA9C1F1B5FD31300F3D055 /* WMEssenceController.m in Sources */,
 				97DA9B6F1B5F472800F3D055 /* main.m in Sources */,
 			);

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "WMTabBarController.h"
 #import "WMGuideView.h"
+#import "WMTopWindow.h"
 @interface AppDelegate ()
 
 @end
@@ -45,6 +46,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    //在这个地方把window添加到窗口上，点击响应的区域scrollView就会返回。在这里添加可以意味着控制器加载后。
+    [WMTopWindow show];
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

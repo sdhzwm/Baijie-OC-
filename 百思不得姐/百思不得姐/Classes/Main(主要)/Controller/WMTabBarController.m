@@ -51,7 +51,7 @@
     
     [self setUpChildVC:[[WMFriendTrendsController alloc] init] image:[UIImage imageNamed:@"tabBar_friendTrends_icon"] selImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"] title:@"关注"];
     
-    [self setUpChildVC:[[WMMeController alloc] init] image:[UIImage imageNamed:@"tabBar_me_icon"] selImage:[UIImage imageNamed:@"tabBar_me_click_icon"] title:@"我"];
+    [self setUpChildVC:[[WMMeController alloc] initWithStyle:UITableViewStyleGrouped] image:[UIImage imageNamed:@"tabBar_me_icon"] selImage:[UIImage imageNamed:@"tabBar_me_click_icon"] title:@"我"];
     
     //替换tabBar
     [self setValue:[[WMTabBar alloc] init] forKeyPath:@"tabBar"];

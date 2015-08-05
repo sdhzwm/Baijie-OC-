@@ -1,5 +1,5 @@
 //
-//  WMMeController.h
+//  WMMeCell.h
 //  百思不得姐
 //
 //  Created by 王蒙 on 15/8/4.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WMMeController : UITableViewController
+@interface WMMeCell : UITableViewCell
 
 @end

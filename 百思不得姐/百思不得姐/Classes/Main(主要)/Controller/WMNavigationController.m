@@ -8,6 +8,9 @@
 
 #import "WMNavigationController.h"
 
+@interface WMNavigationController() <UIGestureRecognizerDelegate>
+
+@end
 @implementation WMNavigationController
 
 
@@ -18,6 +21,32 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.interactivePopGestureRecognizer.enabled = NO;
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    
+    pan.delegate = self;
+    
+    [self.view addGestureRecognizer:pan];
+}
+
+//- (void)viewDidAppear:(BOOL)animated{
+//
+//    //设置滑动回退
+//    __weak typeof(self) weakSelf = self;
+//    self.navigationController.interactivePopGestureRecognizer.delegate = weakSelf;
+//    //判断是否为第一个view
+//    if (self.navigationController && [self.navigationController.viewControllers count] == 1) {
+//        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+//    }
+//}
+
+#pragma mark - 手势代理方法
+// 是否开始触发手势
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    // 判断下当前控制器是否是跟控制器
+    
+    return (self.topViewController != [self.viewControllers firstObject]);
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
@@ -47,6 +76,8 @@
     }
     [super pushViewController:viewController animated:animated];
 }
+
+
 
 - (void)onClick{
     [self popViewControllerAnimated:YES];

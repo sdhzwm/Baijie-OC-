@@ -52,28 +52,26 @@
 
 
 - (void)setUpSubController{
-    WMWordController *sub4 = [[WMWordController alloc] init];
-    sub4.title = @"图片";
-    sub4.essenceType = EssenceTypePicture;
-    [self addChildViewController:sub4];
-       WMWordController *sub1 = [[WMWordController alloc] init];
+    WMWordController *sub1 = [[WMWordController alloc] init];
       sub1.title = @"全部";
-     sub1.essenceType = EssenceTypeAll;
+      sub1.essenceType = EssenceTypeAll;
     [self addChildViewController:sub1];
     WMWordController *sub2 = [[WMWordController alloc] init];
       sub2.title = @"视频";
-     sub2.essenceType = EssenceTypeVideo;
+      sub2.essenceType = EssenceTypeVideo;
     [self addChildViewController:sub2];
     WMWordController *sub3 = [[WMWordController alloc] init];
       sub3.title = @"声音";
-     sub3.essenceType = EssenceTypeVoice;
+      sub3.essenceType = EssenceTypeVoice;
     [self addChildViewController:sub3];
+    WMWordController *sub4 = [[WMWordController alloc] init];
+      sub4.title = @"图片";
+      sub4.essenceType = EssenceTypePicture;
+    [self addChildViewController:sub4];
     WMWordController *sub = [[WMWordController alloc] init];
-    sub.title = @"段子";
-    sub.essenceType = EssenceTypeWord;
+      sub.title = @"段子";
+      sub.essenceType = EssenceTypeWord;
     [self addChildViewController:sub];
-
-    
 }
 - (void)setUpTitlesView{
     //标签栏
@@ -162,8 +160,15 @@
     
     CGPoint offset = self.conterView.contentOffset;
     offset.x = btn.tag * self.conterView.width;
-    self.conterView.contentOffset = offset;
-    [self scrollViewDidEndScrollingAnimation:self.conterView];
+    //self.conterView.contentOffset = offset;
+    
+//    CATransition* transition = [CATransition animation];
+//    transition.duration = 0.5;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    transition.type = kCATransitionFade;
+  //  [self.conterView setContentOffset:offset];
+    [self.conterView setContentOffset:offset animated:YES];
+    //[self scrollViewDidEndScrollingAnimation:self.conterView];
 
 }
 
@@ -183,8 +188,11 @@
     sub.view.x = scrollView.contentOffset.x;
     sub.view.y = 0;
     sub.view.height = scrollView.height;
+    
     [scrollView addSubview:sub.view];
 }
+
+
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
 
@@ -195,4 +203,6 @@
     [self titleClick:self.titlesView.subviews[atIndex]];
 
 }
+
+
 @end

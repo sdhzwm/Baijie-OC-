@@ -37,8 +37,11 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
     tap.numberOfTapsRequired = 2;
     [imageView addGestureRecognizer:tap];
+    
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeWindow)];
+    
     [tap1 requireGestureRecognizerToFail:tap];
+    
     [imageView addGestureRecognizer:tap1];
     [self.scrollView addSubview:imageView];
     self.imageView = imageView;
@@ -94,8 +97,8 @@
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
-    CGFloat imageW = [UIScreen mainScreen].bounds.size.width;
-    CGFloat imageH = imageW * self.imageView.height / self.imageView.width;
+ //   CGFloat imageW = [UIScreen mainScreen].bounds.size.width;
+//    CGFloat imageH = imageW * self.imageView.height / self.imageView.width;
     self.imageView.centerY = [UIScreen mainScreen].bounds.size.height*0.5;
 
     return  self.imageView;

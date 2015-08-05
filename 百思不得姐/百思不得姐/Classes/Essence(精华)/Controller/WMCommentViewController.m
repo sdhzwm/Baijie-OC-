@@ -16,7 +16,7 @@
 #import "WMAllEssenceCell.h"
 #import "WMCommentHeaderView.h"
 #import "WMCommentCell.h"
-@interface WMCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface WMCommentViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstranint;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -51,8 +51,10 @@
     //设置headerView
     [self settingHeaderView];
     [self setingRefresh];
-    
+   
 }
+
+
 #pragma mark - 一些系统设置
 static NSString *ID = @"comentCell";
 - (void)settingTableView{

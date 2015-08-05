@@ -20,18 +20,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
 - (IBAction)registerUserBtn:(UIButton*)sender {
     [self.view endEditing:YES];
     if (self.loginHorizonayoutContraint.constant == 0) {
         
         
         self.loginHorizonayoutContraint.constant = -self.view.width;
-        NSLog(@"%f",self.loginHorizonayoutContraint.constant);
-
-        sender.selected = YES;
+               sender.selected = YES;
     }else{
         self.loginHorizonayoutContraint.constant = 0;
-         NSLog(@"%f",self.loginHorizonayoutContraint.constant);
+        
         sender.selected = NO;
     }
     
@@ -40,12 +43,13 @@
     }];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
+//- (UIStatusBarStyle)preferredStatusBarStyle{
+//    return UIStatusBarStyleLightContent;
+//}
 
 - (IBAction)closesBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     

@@ -39,11 +39,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setUpTableView];
     [self setUpRefresh];
     
 }
+
 static NSString *allWord = @"allWordId";
 
 - (void)setUpTableView{
@@ -125,7 +125,6 @@ static NSString *allWord = @"allWordId";
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject){
        
-        NSLog(@"%@",self.maxtime);
         NSArray *words = [WMWordToip objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         [self.words addObjectsFromArray:words];
