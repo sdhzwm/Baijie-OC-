@@ -17,6 +17,7 @@ CGFloat const WMTextTopViewY = 55;
 CGFloat const WMTextBottomViewH = 44;
 CGFloat const WMLargePictureMaxH = 1000;
 CGFloat const WMLargePictureH = 250;
+CGFloat const WMTagMargin = 5;
 /** XMGUser模型-性别属性值 */
 NSString * const WMUserSexMale = @"m";
 NSString * const WMUserSexFemale = @"f";

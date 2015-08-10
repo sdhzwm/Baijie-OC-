@@ -33,7 +33,9 @@
 - (void)awakeFromNib{
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+   
     self.backgroundView = bgView;
+    
 }
 
 - (void)setCmt:(WMComment *)cmt{
@@ -53,6 +55,8 @@
     }
     
 }
+
+
 
 
 @end

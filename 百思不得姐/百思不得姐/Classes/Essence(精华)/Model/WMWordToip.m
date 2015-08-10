@@ -80,23 +80,21 @@
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
         //计算只显示文字的话的cell的高度, 上面视图的Y值 + 文字内容的高度 + 两个间隔
         _cellHeight = WMTextTopViewY + textH  + 2 * WMWordCellMargin;
-        //这个的类型是图片
-        if (self.type != EssenceTypePicture) {
-            
-        }
+     
         if (self.type == EssenceTypePicture){
-            CGFloat imageW = maxSize.width;
-            CGFloat imageH = imageW * self.height / self.width;
-            CGFloat imageX = WMWordCellMargin;
-            CGFloat imageY = textH + WMWordCellMargin + WMTitilesViewY;
-           
-            if (imageH >= WMLargePictureMaxH) {
-                imageH = WMLargePictureH;
-                self.largePicture = YES;
+            if (self.width != 0 && self.height != 0) {
+                CGFloat imageW = maxSize.width;
+                CGFloat imageH = imageW * self.height / self.width;
+                CGFloat imageX = WMWordCellMargin;
+                CGFloat imageY = textH + WMWordCellMargin + WMTitilesViewY;
+               
+                if (imageH >= WMLargePictureMaxH) {
+                    imageH = WMLargePictureH;
+                    self.largePicture = YES;
+                }
+                _imageFrame = CGRectMake(imageX, imageY, imageW, imageH);
+                _cellHeight += imageH + WMWordCellMargin;
             }
-            _imageFrame = CGRectMake(imageX, imageY, imageW, imageH);
-            _cellHeight += imageH + WMWordCellMargin;
-            
         }
         
         if (self.type == EssenceTypeVoice){

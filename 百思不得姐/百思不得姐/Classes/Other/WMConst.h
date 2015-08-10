@@ -31,5 +31,6 @@ UIKIT_EXTERN CGFloat const WMLargePictureMaxH;
 UIKIT_EXTERN CGFloat const WMLargePictureH;
 UIKIT_EXTERN NSString * const WMUserSexMale;
 UIKIT_EXTERN NSString * const WMUserSexFemale;
+UIKIT_EXTERN CGFloat const WMTagMargin;
 /**用于发送tabbar选中的通知*/
 UIKIT_EXTERN NSString *const WMTabBarDidSelectNotification;

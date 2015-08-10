@@ -17,6 +17,20 @@
 +(void)initialize{
     UINavigationBar *navBar = [UINavigationBar appearance];
     [navBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    [navBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:20]}];
+    
+    UIBarButtonItem *bar = [UIBarButtonItem appearance];
+    
+    NSMutableDictionary *arrDict = [NSMutableDictionary dictionary];
+    arrDict[NSFontAttributeName] = [UIFont systemFontOfSize:16];
+    arrDict[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [bar setTitleTextAttributes:arrDict forState:UIControlStateNormal];
+    
+    NSMutableDictionary *disDict = [NSMutableDictionary dictionary];
+
+    disDict[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [bar setTitleTextAttributes:disDict forState:UIControlStateDisabled];
+    
 }
 
 - (void)viewDidLoad{

@@ -160,12 +160,7 @@
     
     CGPoint offset = self.conterView.contentOffset;
     offset.x = btn.tag * self.conterView.width;
-    //self.conterView.contentOffset = offset;
-    
-//    CATransition* transition = [CATransition animation];
-//    transition.duration = 0.5;
-//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    transition.type = kCATransitionFade;
+
   //  [self.conterView setContentOffset:offset];
     [self.conterView setContentOffset:offset animated:YES];
     //[self scrollViewDidEndScrollingAnimation:self.conterView];

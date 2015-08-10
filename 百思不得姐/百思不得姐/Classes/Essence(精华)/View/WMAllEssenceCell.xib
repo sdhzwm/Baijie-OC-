@@ -88,6 +88,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" title="1万" image="mainCellCommentClick"/>
+                                <connections>
+                                    <action selector="commenButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="78D-Qs-UgG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

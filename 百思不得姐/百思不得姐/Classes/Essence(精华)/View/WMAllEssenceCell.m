@@ -14,6 +14,7 @@
 #import "WMToipVideoView.h"
 #import "WMComment.h"
 #import "WMUser.h"
+#import "WMCommentViewController.h"
 @interface WMAllEssenceCell()
 /** 头像 */
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -160,6 +161,17 @@
     frame.origin.y += more;
     frame.size.height = self.wordToip.cellHeight - more;
     [super setFrame:frame];
+}
+- (IBAction)commenButtonClick:(id)sender {
+    
+    WMCommentViewController *cmtVc = [[WMCommentViewController alloc] init];
+    cmtVc.wordToip = self.wordToip;
+    
+    UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
+    
+    UINavigationController *nav = (UINavigationController *)tabBar.selectedViewController;
+    
+    [nav pushViewController:cmtVc animated:YES];
 }
 
 @end

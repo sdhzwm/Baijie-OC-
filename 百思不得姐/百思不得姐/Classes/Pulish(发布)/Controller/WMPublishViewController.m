@@ -9,6 +9,8 @@
 #import "WMPublishViewController.h"
 #import <POP.h>
 #import "WMCustomBtn.h"
+#import "WMPostWordController.h"
+#import "WMNavigationController.h"
 
 #define screenSize [UIScreen mainScreen].bounds.size
 @interface WMPublishViewController ()
@@ -61,7 +63,7 @@
 
 }
 
-- (void)setSloganView:(NSUInteger)imageCount{
+- (void)setSloganView:(NSUInteger)imageCount {
     
     // 添加标语
     UIImageView *sloganView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app_slogan"]];
@@ -86,7 +88,7 @@
 
 }
 
-- (void)setBtnTitleWithImage:(UIButton*)btn title:(NSString*)title image:(NSString*)image{
+- (void)setBtnTitleWithImage:(UIButton*)btn title:(NSString*)title image:(NSString*)image {
     
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
@@ -97,14 +99,25 @@
     
 }
 
-- (void)onClick:(UIButton*)btn{
+- (void)onClick:(UIButton*)btn {
+    //动画执行完毕后
     [self cancelWithCompletionBlock:^{
-        NSLog(@"%@",btn.currentTitle);
+        if (btn.tag == 2) {
+            WMPostWordController *post = [[WMPostWordController alloc] init];
+            
+            WMNavigationController *nav = [[WMNavigationController alloc] initWithRootViewController:post];
+            
+            UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+            
+            [root presentViewController:nav animated:YES completion:nil];
+            
+        }
     }];
+    
     
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self cancelWithCompletionBlock:nil];
 }
 
@@ -112,7 +125,7 @@
     [self cancelWithCompletionBlock:nil];
 }
 
-- (void)cancelWithCompletionBlock:(void (^)())completionBlock{
+- (void)cancelWithCompletionBlock:(void (^)())completionBlock {
     self.view.userInteractionEnabled = NO;
     NSUInteger atIndex = 2;
     for (NSUInteger i = atIndex; i<self.view.subviews.count; i++) {
@@ -130,8 +143,11 @@
         if(i == self.view.subviews.count - 1){
             [basic setCompletionBlock:^(POPAnimation *basic, BOOL finish) {
                 
-                [self dismissViewControllerAnimated:YES completion:nil];
+                [self dismissViewControllerAnimated:NO completion:nil];
+                
                 !completionBlock ? : completionBlock();
+
+                
             }];
         }
     }

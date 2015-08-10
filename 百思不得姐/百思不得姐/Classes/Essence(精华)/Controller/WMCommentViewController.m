@@ -56,13 +56,13 @@
 
 
 #pragma mark - 一些系统设置
-static NSString *ID = @"comentCell";
+static NSString *ID = @"comment";
 - (void)settingTableView{
     self.title = @"评论";
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem initWithBackGroudImage:@"comment_nav_item_share_icon" highlightedImage:@"comment_nav_item_share_icon_click" targer:nil action:nil];
     self.tableView.backgroundColor = WMGlobalBg;
     
-    self.tableView.estimatedRowHeight = 64;
+    self.tableView.estimatedRowHeight = 120;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     // 去掉分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -253,8 +253,8 @@ static NSString *ID = @"comentCell";
     WMCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     WMComment *cmt = [self commentInIndexPath:indexPath];
     cell.cmt = cmt;
+      
     return cell;
-
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -270,6 +270,8 @@ static NSString *ID = @"comentCell";
     return header;
     
 }
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIMenuController *menu = [UIMenuController sharedMenuController];
